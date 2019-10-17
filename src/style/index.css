@@ -1,16 +1,18 @@
+/*
+#22c1c3
+#fdbb2d
+*/
 html, body {
 	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	background: #FAFAFA;
+	background: #fff;
 	font-family: 'Helvetica Neue', 'Roboto', sans-serif;
 	font-weight: 400;
 	color: #444;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	/* background: rgb(7,0,120);
-	background: linear-gradient(155deg, rgba(7,0,120,1) 0%, rgba(255,0,204,1) 100%); */
 }
 
 * {
