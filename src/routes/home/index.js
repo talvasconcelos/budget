@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+import Hero from '../../components/hero'
+import Modal from '../../components/modal'
+import List from '../../components/txlist'
+
 const HomeWrapper = styled.div`
 	padding: 20px;
 	min-height: 100%;
@@ -13,55 +17,37 @@ const AddTx = styled.div`
 	margin: 20px;
 	width: 56px;
 	height: 56px;
-	border-radius: 5px;
-	background: red;
+	border-radius: 10px;
+	background: #d53369;
 	cursor: pointer;
-	padding: 6px;
-`
-
-const Plus = styled.div`
-	position: relative;
-	border-width: 2px;
-	border-style: solid;
-	height: 20px;
-	width: 20px;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: 0.3s all;
-	&:before, after{
+	box-shadow: 5px 5px 15px 5px rgba(168,168,168,1);
+	&:before {
 		content: "";
 		position: absolute;
-		height: 4px;
-		width: 4px;
-	}
-	&:before{
-		border-bottom-width: 2px;
-		border-bottom-style: solid;
+		color: #fff;
+		height: 50%;
 		border-left-width: 2px;
 		border-left-style: solid;
-		left: 9px;
-		top: 5px;
+		left: calc(50% - 1px);
+		top: 25%;
 	}
-	&:after{
-		border-top-width: 2px;
-		border-top-style: solid;
-		border-right-width: 2px;
-		border-right-style: solid;
-		left: 5px;
-		top: 9px;
+	&:after {
+		content: "";
+		position: absolute;
+		color: #fff;
+		width: 50%;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+		top: calc(50% - 1px);
+		left: 25%;
 	}
 `
 
-import Hero from '../../components/hero'
-import List from '../../components/txlist'
-
-const Home = () => (
+const Home = ({add}) => (
 	<HomeWrapper>
 		<Hero />
 		<List />
-		<AddTx>
-			<Plus />
-		</AddTx>
+		<AddTx onClick={add} />
 	</HomeWrapper>
 );
 

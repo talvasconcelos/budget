@@ -9,8 +9,8 @@ const HeroHead = styled.div`
     padding: 20px;
     color: #fff;
     box-shadow: 5px 5px 15px 5px rgba(168,168,168,1);
-    background: #283c86;
-    background: linear-gradient(to right, #283c86, #45a247);
+    background: #d53369;
+    background: linear-gradient(to right, #d53369, #cbad6d);
 `
 
 const HeroFoot = styled.div`

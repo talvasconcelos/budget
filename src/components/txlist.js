@@ -26,16 +26,16 @@ const List = () => {
     const sorted = [...dummy].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
     const [today, yesterday, dates] = sortDayWeek(sorted)
     return (<div>
-        {today.length && <h3>Today</h3>}            
-        {today.length && yesterday.map(c => (
+        {<h3>Today</h3>}            
+        {today.length > 0 && yesterday.map(c => (
             <p>{`${new Date(c.timestamp).toLocaleString()} / € ${c.amount.toFixed(2)}`}</p>
         ))}
-        {yesterday.length && <h3>Yesterday</h3>}   
-        {yesterday.length && yesterday.map(c => (
+        {yesterday.length > 0 && <h3>Yesterday</h3>}
+        {yesterday.length > 0 && yesterday.map(c => (
             <p>{`${new Date(c.timestamp).toLocaleString()} / € ${c.amount.toFixed(2)}`}</p>
         ))}
-        {dates.length && <h3>Later</h3>}   
-        {dates.length && dates.map(c => (
+        {dates.length > 0 && <h3>Later</h3>}   
+        {dates.length > 0 && dates.map(c => (
             <p>{`${new Date(c.timestamp).toLocaleString()} / € ${c.amount.toFixed(2)}`}</p>
         ))}
     </div>)
